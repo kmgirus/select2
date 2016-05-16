@@ -1697,6 +1697,9 @@ the specific language governing permissions and limitations under the Apache Lic
                 results.scrollTop(0);
                 return;
             }
+            if(!this.scrollOnHighlight) {
+                return
+            }
 
             children = this.findHighlightableChoices().find('.select2-result-label');
 
@@ -3615,6 +3618,7 @@ the specific language governing permissions and limitations under the Apache Lic
         loadMorePadding: 0,
         closeOnSelect: true,
         openOnEnter: true,
+        scrollOnHighlight: false,
         containerCss: {},
         dropdownCss: {},
         containerCssClass: "",
